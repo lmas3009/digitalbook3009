@@ -1,0 +1,127 @@
+
+*{
+    margin: 0em;
+    padding: 0em;
+    font-family: cursive;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/background.jpg');
+    height: 100vh;
+    background-repeat: inherit;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+}
+.title{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    color: #fff;
+    font-size: 70px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 600px;
+    grid-template-rows: 110px 10px 80px;
+    grid-template-areas: "text" "stats";
+
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+    transition: 0.5s ease;
+    margin-top: -100px;
+     
+}
+
+.card-text{
+    grid-area: text;
+}
+.card-text .date{
+    color: rgba(255,7,110);
+    font-size: 13px;
+}
+.card-text p{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+.card-text h2{
+    margin-top: 0em;
+    font-size: 28px;
+}
+.card-stats{
+    grid-area: stats;
+    margin-top: 50px;
+    cursor: pointer;
+    
+}
+.card-stats .getstart .stat .type{
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin-left: 30%;
+    align-items: center;
+    margin-right: 30%;
+}
+.card:hover{
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+  #wrapper #dialog #form {
+    max-width: 240px;
+    margin: 5px auto 0;
+  }
+  #wrapper #dialog #form input {
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    outline: none;
+    width: 20%;
+    transition: all 0.2s ease-in-out;
+    border-radius: 3px;
+  }
+  #wrapper #dialog #form input:focus {
+    border-color: purple;
+    box-shadow: 0 0 5px purple inset;
+  }
+  #wrapper #dialog #form input::-moz-selection {
+    background: transparent;
+  }
+  #wrapper #dialog #form input::selection {
+    background: transparent;
+  }
+ 
+.submit{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.submit h3{
+    color: #fff;
+    font-size: 30px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    transition: 0.6s ease;
+    font-family: Roboto;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.submit h3:hover{
+    transform: scale(1.2);
+    background-color: #fff;
+    color: #000;
+}
+a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}

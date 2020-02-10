@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+  
+  <script src="js/index.js"></script>
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="left">
+      <div id="signin">
+        <div class="logo">
+          <center><h3 class="style"> DB <br> Digital Book</h3></center>
+        </div>
+          <div>
+            <label>Email</label>
+            <input type="email" class="text-input" placeholder="Email..." id="email_field" />
+            <label>Password</label>
+            <input type="password" class="text-input" placeholder="Password..." id="password_field" />
+          </div>
+          <button onclick="login()" class="primary-btn">Login</button><br>
+
+
+        <!--<form >
+  <div >
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+</form>-->
+  <div class="links">
+    <a href="#">Forgot Password</a>
+  </div>
+  <div class="or">
+    <hr class="bar" />
+    <span>OR</span>
+    <hr class="bar" />
+  </div>
+  <a href="signup.html" class="secondary-btn">Create an account</a>
+</div>
+<footer id="main-footer">
+  <p>Copyright &copy; 2019, Digital Book All Rights Reserved</p>
+  <div>
+    <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+</div>
+<div id="right">
+<div id="showcase">
+  <div class="showcase-content">
+    <h1 class="showcase-text">
+      Let's create the future <strong>together</strong>
+    </h1>
+    <a href="#" class="secondary-btn">Explore your reading with Digital world</a>
+  </div>
+</div>
+</div>
+</div>
+
+  
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
+  <script>
+  
+  var firebaseConfig = {
+    apiKey: "AIzaSyDzRIhanylfxMS_EmXBaLaMmEmTW76v1kA",
+    authDomain: "digitalbook-6c930.firebaseapp.com",
+    databaseURL: "https://digitalbook-6c930.firebaseio.com",
+    projectId: "digitalbook-6c930",
+    storageBucket: "digitalbook-6c930.appspot.com",
+    messagingSenderId: "739535333881",
+    appId: "1:739535333881:web:0d526f4ce06bae4581b528"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    window.location.href="main.html";
+  } 
+});
+  </script>
+
+</body>
+</html>

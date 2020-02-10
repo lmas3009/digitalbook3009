@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/teachers.css">
+    <script src="js/index.js"></script>
+    
+    <title>Teachers</title>
+</head>
+<body>
+    <div id="plan">
+    <button onclick="did()">Load the Details</button>
+</div>
+
+    <form id="colleges">
+        Select  the college
+        <select name="" id="collegs">
+            <option value="">Select The College</option>
+        </select><br>
+    </form>
+    <div id="deta">
+    <button onclick="getdetails()">Get Details</button></div>
+    <form id="details">
+    <h3 id="nameofclg"></h3>
+        Select Year:- 
+        <select name="" id="year">
+        <option value="">First</option>
+        <option value="">Second</option>
+        <option value="">Third</option>
+        <option value="">Fourth</option></select><br>
+        Select Semester:- 
+        <select name="" id="sem">
+        <option value="">First</option>
+        <option value="">Second</option>
+        <option value="">Third</option>
+        <option value="">Fourth</option>
+        <option value="">Fifth</option>
+        <option value="">Sixth</option>
+        <option value="">Seventh</option>
+        <option value="">Eight</option></select><br>
+        Select the Courses:- 
+        <select name="" id="cour">
+            <option value="">OOP</option>
+            <option value="">OS</option>
+            <option value="">EE</option>
+            <option value="">SE</option></select><br>
+            
+        Select the Format:- 
+        <select name="" id="year">
+            <option value="">PDF</option>
+            <option value="">PPT</option></select><br>
+        Enter the name of your file:- 
+        <input type="text" id="name" placeholder="Enter the name"><br>
+        Upload The file:-
+        <input type="file" name="" id="file" onchange="cha()"> <br>
+       <input type="button" name="" id="" onclick="sub()" value="submit">
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
+    <script>
+         document.getElementById("colleges").style.display = "none";
+  document.getElementById("details").style.display = "none";
+  document.getElementById("deta").style.display = "none";
+
+       var firebaseConfig = {
+apiKey: "AIzaSyDzRIhanylfxMS_EmXBaLaMmEmTW76v1kA",
+authDomain: "digitalbook-6c930.firebaseapp.com",
+databaseURL: "https://digitalbook-6c930.firebaseio.com",
+projectId: "digitalbook-6c930",
+storageBucket: "digitalbook-6c930.appspot.com",
+messagingSenderId: "739535333881",
+appId: "1:739535333881:web:0d526f4ce06bae4581b528"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">LMAS</a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="index.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section class="hero">
+            <div class="inner">
+                <div class="clipper">
+                    <h1>Digital Book</h1>
+                </div>
+            <div class="anim-panel">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ut distinctio maxime atque repudiandae culpa porro quis, ipsa velit minima!</p>
+                <a href="index.html" class="read-btn primary">Get Started</a>
+            </div>
+        </div>
+        </section>
+        <section class="sidebar">
+            <div class="inner">
+                <div class="clipper">
+                    <h1>Projects</h1>
+                </div>
+            <div class="anim-panel">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus fuga nesciunt eos excepturi odit molestiae cumque doloribus optio consequuntur ipsum voluptas iusto, facilis iste ullam omnis voluptatem distinctio sapiente nisi?</p>
+                <a href="#" class="read-btn">Read More</a>
+            </div>
+        </div>
+        </section>
+        <section class="subscribe">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Subscribe</h2>
+                </div>
+                <div class="anim-panel">
+                    <p>get the latest update about this website and stuff.</p>
+                    <input type="text" name="email" placeholder="Email Address">
+                    <button class="cta">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script>
+    var t1 = new TimelineMax();
+    t1.staggerFrom('section',2,{
+        opacity: 0,
+        scale: .5,
+        ease: Power2.easeOut
+    },0.2)
+    </script>
+</body>
+</html>

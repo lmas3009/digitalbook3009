@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Book</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+   
+    <header >
+      <div class="main">
+          <div class="logo">
+              <img src="images/logoname.png" alt="" srcset="">
+          </div>
+          <ul>
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#" onclick="logout()">Logout</a></li>
+          </ul>
+      </div>
+      <div id="main1">
+      <div class="title">
+        <h3 id="nameofclg"></h3><br>
+        <h1>Digital Book</h1>
+      </div>
+
+      <div class="button">
+          <a href="Student.html" class="btn">Student</a>
+          <a href="teachers-pin.html" class="btn">Teachers/Faculty</a>
+      </div>
+    </div>
+    <div id="search">
+      <div class="sea">
+        <div class="button">
+        <select name="" id="collegs">
+          <option value="">Select The College</option>
+        </select>
+        <button id="search" onclick="search()" >Search</button>
+      </div>
+      </div>
+    </div>
+    <div id="get">
+      <div class="sea">
+        <div class="button">
+          <button onclick="getstart()" class="btn">Get Started</button>
+      </div>
+      </div>
+    </div>
+      
+  <h5>&copy 2020, Lmas  All rights reserved</h5>
+  </header>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+    apiKey: "AIzaSyDzRIhanylfxMS_EmXBaLaMmEmTW76v1kA",
+    authDomain: "digitalbook-6c930.firebaseapp.com",
+    databaseURL: "https://digitalbook-6c930.firebaseio.com",
+    projectId: "digitalbook-6c930",
+    storageBucket: "digitalbook-6c930.appspot.com",
+    messagingSenderId: "739535333881",
+    appId: "1:739535333881:web:0d526f4ce06bae4581b528"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    firebase.auth().onAuthStateChanged(function(user) {
+  if (!user) {
+    window.location.href="home.html";
+  } 
+});
+
+document.getElementById("main1").style.display = "none";
+document.getElementById("search").style.display = "none";
+  </script>
+</body>
+</html>
