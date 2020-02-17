@@ -168,7 +168,7 @@ function reload()
 }
 
 
-
+/*
 
 (() => {
   
@@ -215,7 +215,7 @@ function reload()
 
 })
 
-
+*/
 
 var id;
 function getstart(){

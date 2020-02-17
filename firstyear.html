@@ -9,6 +9,9 @@
 </head>
 <body>
     
+  <div id="butt">
+    <button onclick="getdeta()">Get Details</button>
+  </div>
     
     <div class = "table">
         <table id="table1">
@@ -42,9 +45,13 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
+  //document.getElementById("table1").style.display = "none";
   
   
-  (() => {
+ (()=>{
+   
+  //document.getElementById("table1").style.display = "block";
+  //document.getElementById("butt").style.display = "none";
     var name;
     var id,id1,id2,id3,id4;
     firebase.auth().onAuthStateChanged(user => {
@@ -92,8 +99,7 @@
            cell4.innerHTML=id;
           }
         }
-  
-        })
+      })
       })
         })
       })
@@ -104,7 +110,6 @@
     });
   })
   ();
-  
   function updateTextArea(){
   
   }

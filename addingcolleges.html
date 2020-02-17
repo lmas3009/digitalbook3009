@@ -13,6 +13,8 @@
     <form>
         Enter the college Name:- <br>
         <input type="text" id="name"><br>
+        Enter the Short cut Name:- <br>
+        <input type="text" id="cut"><br>
        
         <button type="button" onclick="myFunction()">Add</button>
       </form>
@@ -33,9 +35,16 @@
 firebase.initializeApp(firebaseConfig);
       function myFunction() {
         var name = document.getElementById("name").value;
+        var shortcut = document.getElementById("cut").value;
         
         firebase.database().ref("Courses/admin").child(name).set({
         username: name,
+        short:shortcut
+  });
+  firebase.auth().onAuthStateChanged(user => {
+    firebase.database().ref("Users").child(user.uid).set({
+      short:shortcut
+    });
   });
         
       }
